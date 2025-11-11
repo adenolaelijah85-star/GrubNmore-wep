@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Elijah — Restaurant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <img class="logo" src="image/WhatsApp_Image_2025-10-20_at_9.07.41_PM-removebg-preview-removebg-preview.png" alt=" logo (replace)">
+      <div>
+        <h1 class="site-title">GrubNmore</h1>
+        <div class="tagline">Fresh Nigerian flavors — order & enjoy</div>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <button id="nav-toggle" class="nav-toggle" aria-label="Open menu">☰</button>
+      <ul class="nav-list">
+        <li><a href="#home" data-link>Home</a></li>
+        <li><a href="#about" data-link>About</a></li>
+        <li><a href="#menu" data-link>Menu</a></li>
+        <li><a href="#contact" data-link>Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+      <button id="open-cart" class="cart-btn" aria-label="Open cart">
+        Cart <span id="cart-count">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- content area: pages will be injected here -->
+  <main id="app"></main>
+
+  <!-- Cart Drawer (shared) -->
+  <aside id="cart-drawer" class="drawer hidden" aria-hidden="true">
+    <div class="drawer-header">
+      <h4>Your Order</h4>
+      <button id="close-cart" aria-label="Close cart">✕</button>
+    </div>
+    <div id="cart-items" class="cart-items"></div>
+    <div class="drawer-footer">
+      <div class="total">Total: <span id="cart-total">₦0</span></div>
+      <button id="send-wa" class="btn send-wa">Send to WhatsApp</button>
+    </div>
+  </aside>
+
+  <footer class="site-footer">
+    <div>© <span id="year"></span> GrubNmore</div>
+    <div class="small">authentic Nigerian dishe</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
