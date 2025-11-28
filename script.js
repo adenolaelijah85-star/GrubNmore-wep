@@ -3,28 +3,37 @@
 /* ----- Configuration ----- */
 const WHATSAPP_NUMBER = '+2349114854561'; // your number for wa.me
 const MENU = [
-  {id:'jollof',name:'Half Chicken Cut',price:2500,img:'image/Half Chicken Cut/IMAG7109.JPG'},
-  {id:'fried',name:'Fried Rice',price:2400,img:'image/Naija Noodles and Egg/IMG_0123.jpg'},
-  {id:'suya',name:'Chicken Suya',price:1800,img:'image/Plantain & Egg Sauce/IMG_8480.JPG'},
-  {id:'plantain',name:'Fried Plantain',price:800,img:'image/Sandwiches/IMAG7026.JPG'},
-  {id:'pounded-yam',name:'Pounded Yam & Egusi',price:2800,img:'image/Spicy Naija Noodles with Turkey/IMG_0134.jpg'},
-  {id:'eba',name:'Eba & Okra Soup',price:2500,img:'image/Yam Royale Combo/IMG_8492.JPG'},
-  {id:'amala',name:'Amala & Ewedu',price:2600,img:'image/BBQ Chicken Wings/IMAG7091.JPG'},
-  {id:'beans',name:'Beans & Plantain',price:2000,img:'image/Chicken Schnitzel/IMAG7083.JPG'},
-  {id:'ofada',name:'Ofada Rice & Sauce',price:3000,img:'image/Chicken Wings/IMAG7098.JPG'},
-  {id:'moimoi',name:'Moi Moi',price:900,img:'image/Chicken Wrap/IMAG7066.JPG'},
-  {id:'pepper-soup',name:'Goat Meat Pepper Soup',price:2200,img:'image/Creamy Alfredo Pasta/IMAG7078.JPG'},
-  {id:'yam-porridge',name:'Yam Porridge',price:1800,img:'image/Crisp Chicken Only/IMG_0192.jpg'},
-  {id:'fish',name:'Fried Fish',price:2000,img:'image/Crispy Chicken & Chips/IMG_0169.jpg'},
-  {id:'stew',name:'Beef Stew',price:2300,img:'image/DODO GANG/IMG_8483.JPG'},
-  {id:'okra2',name:'Seafood Okra Soup',price:2700,img:'image/Fried Paper Chicken/IMG_0106.jpg'},
-  {id:'white-rice',name:'White Rice & Stew',price:2100,img:'image/Fried Pepper Turkey/IMG_0111.jpg'},
-  {id:'catfish',name:'Catfish Pepper Soup',price:2400,img:'image/Half Chicken Cut/IMAG7109.JPG'},
-  {id:'egusi',name:'Egusi Soup (with Beef)',price:2600,img:'image/Yam Royale Combo/IMG_8494.JPG'},
-  {id:'snail',name:'Grilled Snail',price:3000,img:'image/Plantain & Egg Sauce/IMG_8480.JPG'},
-  {id:'salad',name:'Nigerian Salad',price:1500,img:'image/Stir-Fry Noodles with Turkey/IMG_0151.jpg'}
-];
+  // --- 🍳RICE/NOODLES  ---
+  {id:'fried-egg', name:'Chicken jollof combo + free coke', price:5600, img:'image/img (1).webp', category:'breakfast', description:'Rich, smoky party-style Jollof Rice served with tender grilled chicken and golden fried plantain — paired with a refreshing Free Coca-Cola drink. A classic combo that tastes like home and feels like joy.'},
+  {id:'plantain-egg', name:'Steamed White Rice (Full Portion)', price:2800, img:'image/image 2.webp', category:'breakfast',description:'A vibrant, flavor-packed bowl of our signature fried rice, generously loaded with crunchy vegetables, sweetcorn, and tender shredded proteins. Each spoon delivers a savory medley of textures '},
+  {id:'naija-noodles-egg', name:'Steamed White Rice (Full Portion)', price:1200, img:'image/image3.webp', category:'breakfast',description:'A vibrant, flavor-packed bowl of our signature fried rice, generously loaded with crunchy vegetables, sweetcorn, and tender shredded proteins. Each spoon delivers a savory medley of textures '},
+  
 
+  // --- 🍛PASTA BOWL/PROTEIN ---
+  {id:'jollof', name:'Stir-fry pasta ( no protein)', price:3120, img:'image/image4.webp', category:'lunch',description:'A vibrant, flavor-packed bowl of our signature fried rice, generously loaded with crunchy vegetables, sweetcorn, and tender shredded proteins. Each spoon delivers a savory medley of textures '},
+  {id:'fried-rice', name:'Spicy naija pasta & full chicken lap', price:7920, img:'image/image5.webp', category:'lunch',description:'A vibrant, flavor-packed bowl of our signature fried rice, generously loaded with crunchy vegetables, sweetcorn, and tender shredded proteins. Each spoon delivers a savory medley of textures '},
+  {id:'pepper-turkey', name:'Spicy naija pasta with turkey', price:10000, img:'image/image 6.webp', category:'lunch',description:'Satisfy your cravings with a bold 250g serving of our signature Spicy Naija Pasta — loaded with fire-roasted pepper sauce, stir-fried to perfection with caramelized onions and a hint of smoky heat in every bite, pair it your way either with chicken wings , chicken lap or turkey'},
+  
+
+  // --- 🌆 PEPPER SOAP / EWAAGANYIN(BEANS)---
+  {id:'noodles-turkey', name:'Chicken Pepper Soup (4pcs)', price:4800, img:'image/image7.webp', category:'dinner',description:'4 big pieces of soft, tender chicken pieces slow-cooked in a spicy, aromatic pepper soup blend of ginger, garlic, scent leaf, and fresh pepper. Light, healthy, and flavorful — a refreshing twist for those who prefer a mild but tasty broth.'},
+  {id:'catfish', name:'Full Catfish Pepper Soup ( 4Pcs )', price:9591, img:'image/image 8.webp', category:'dinner',description:'4 Big fresh catfish seasoned and simmered in a spicy, aromatic pepper soup mix with scent leaf and local spices. Each bowl is light, peppery, and bursting with flavor — a true Lagos favorite for fish lovers.'},
+  {id:'half-chicken', name:'Half Catfish Pepper Soup (2Pcs)', price:4800, img:'image/image 8.webp', category:'dinner',description:'2 big fresh catfish seasoned and simmered in a spicy, aromatic pepper soup mix with scent leaf and local spices. Each bowl is light, peppery, and bursting with flavor'},
+  {id:'fried-rice-egg', name:'Assorted Meat Pepper Soup', price:4800, img:'image/image 9.webp', category:'dinner',description:'Crispy potato chips, fresh salad mix, seasoned chicken, and our signature creamy house sauce , all rolled into a soft tortilla for the perfect crunch-meets-creamy experience.'},
+  
+
+  // --- 🍗SHAWARMA / BURRITOS ---
+  {id:'chips', name:'Large Suya Beef Shawarma ( 2 Sausage )', price:4800, img:'image/image 10.webp', category:'snacks',description:'Tender spiced suya beef, sausage and strips layered with crunchy veggies and our rich, creamy house sauce, rolled up in a warm tortilla for that perfect smoky bite. Bold, meaty, and irresistibly good'},
+  {id:'dodo', name:'Medium Suya Beef Shawarma ( 1 Sausage )', price:4000, img:'image/image 10.webp', category:'snacks',description:'Juicy grilled suya beef, Sausage, fresh veggies, and our signature creamy sauce, all wrapped in a soft tortilla and lightly toasted to perfection. Deliciously saucy, flavorful, and satisfying in every bite.'},
+  {id:'suya', name:'Large Chicken Shawarma (2 Sausage )', price:4400, img:'image/image (11).webp', category:'snacks',description:'Tender spiced bee, with sausage and strips layered with crunchy veggies and our rich, creamy house sauce, rolled up in a warm tortilla for that perfect smoky bite. Bold, meaty, and irresistibly good.'},
+  {id:'meatpie', name:'Medium chicken shawarma (1 sausage )', price:3840, img:'image/image (11).webp', category:'snacks',description:'Juicy grilled chicken, Sausage, fresh veggies, and our signature creamy sauce, all wrapped in a soft tortilla and lightly toasted to perfection. Deliciously saucy, flavorful, and satisfying in every bite.'},
+  {id:'meatpie', name:'Beans & Dodo Burrito', price:3840, img:'image/image (12).webp', category:'snacks',description:'Juicy grilled chicken, Sausage, fresh veggies, and our signature creamy sauce, all wrapped in a soft tortilla and lightly toasted to perfection. Deliciously saucy, flavorful, and satisfying in every bite.'},
+  {id:'meatpie', name:'Chips & Salad Burrito', price:3840, img:'image/image (13).webp', category:'snacks',description:'Juicy grilled chicken, Sausage, fresh veggies, and our signature creamy sauce, all wrapped in a soft tortilla and lightly toasted to perfection. Deliciously saucy, flavorful, and satisfying in every bite.'},
+
+  // --- 🥤 SOAPS / SOAP & SWALLOW COMBO ---
+  
+  
+];
 /* ----- Simple DOM helpers ----- */
 const $ = sel => document.querySelector(sel);
 const $$ = sel => Array.from(document.querySelectorAll(sel));
@@ -32,62 +41,223 @@ const $$ = sel => Array.from(document.querySelectorAll(sel));
 /* ----- Routing: render pages into #app ----- */
 function renderHome(){
   return `
+    <!-- HERO SECTION -->
     <section class="hero">
       <div class="hero-text">
-        <h2>Welcome to GrubNmore</h2>
-        <p>Delicious, home-cooked Nigerian meals prepared fresh every day. Explore our menu, add to cart, and send your order via WhatsApp.</p>
+        <h2>Fresh Nigerian Meals, Delivered Hot</h2>
+        <p>Enjoy delicious, homemade dishes prepared with love — straight from our kitchen to your doorstep. Fast delivery, affordable meals, unforgettable taste.</p>
+
+        <div style="margin:12px 0; display:flex; gap:14px; align-items:center;">
+          <span style="font-size:20px; color:#f5b300;">⭐⭐⭐⭐⭐</span>
+          <span style="color:var(--muted)">Rated #1 by our happy customers</span>
+        </div>
+
         <div style="margin-top:12px">
-          <a class="btn" href="#menu" data-link>View Menu</a>
-          <a class="btn btn-outline" href="#contact" data-link style="margin-left:8px">Contact Us</a>
+          <a class="btn" href="#menu" data-link>Explore Menu</a>
+          <a class="btn btn-outline" href="#contact" data-link style="margin-left:8px">Order on WhatsApp</a>
+        </div>
+
+        <div style="margin-top:18px; display:flex; gap:10px;">
+          <div class="badge">🚚 Fast Delivery</div>
+          <div class="badge">🔥 Fresh Daily</div>
+          <div class="badge">🔥 Fresh Tast</div>
         </div>
       </div>
-      <img class="hero-image" src="image/IMAG7130.JPG" alt="Delicious food">
+
+      <img class="hero-image" src="image/IMG_0136.jpg" alt="Delicious food">
     </section>
 
-    <section>
-      <h3 style="text-align:center">Popular Picks</h3>
-      <div class="cards" style="margin-top:14px">
-        <div class="card"><img src="image/Fried Egg/IMG_0155.jpg" alt="" style="width:100%;border-radius:10px"><h4>Fried Egg— ₦2,500</h4></div>
-        <div class="card"><img src="image/Spicy Naija Noodles and Chicken/IMG_0129.jpg" alt="" style="width:100%;border-radius:10px"><h4>Spicy Naija Noodles and Chicke — ₦2,400</h4></div>
-        <div class="card"><img src="image/Naija Noodles and Egg/IMG_0121.jpg" alt="" style="width:100%;border-radius:10px"><h4>Naija Noodles and Egg — ₦1,800</h4></div>
+    <!-- WHY CHOOSE US -->
+    <section style="margin-top:40px">
+      <h3 style="text-align:center">Why Choose GrubNmore?</h3>
+      <div class="cards" style="margin-top:20px">
+        <div class="card">
+          <h4>🍽 Authentic Taste</h4>
+          <p>We cook real Nigerian meals using the freshest locally sourced ingredients.</p>
+        </div>
+        <div class="card">
+          <h4>⚡ Fast Delivery</h4>
+          <p>Your meals arrive hot and on time — always.</p>
+        </div>
+        <div class="card">
+          <h4>💰 Affordable Prices</h4>
+          <p>Top-quality meals at pocket-friendly prices.</p>
+        </div>
       </div>
     </section>
-  `;
-}
+<!-- TODAY'S SPECIALS -->
+<section id="specials-section" style="margin-top:50px; text-align:center;">
+  <h3>Today's Specials</h3>
+  <p style="color:var(--muted); margin-bottom:20px;">Freshly prepared for you</p>
 
+  <div id="special-box" class="special-box">
+    <img id="special-img" src="" alt="Special Meal">
+    <h4 id="special-name"></h4>
+    <p id="special-price"></p>
+  </div>
+</section>
+
+    <!-- POPULAR PICKS -->
+    <section style="margin-top:50px">
+      <h3 style="text-align:center">Popular Picks</h3>
+      <p style="text-align:center; color:var(--muted); font-size:14px;">Our customers' all-time favorites</p>
+
+      <div class="cards" style="margin-top:14px">
+        <div class="card">
+          <img src="image/IMG_0155.jpg" alt="" style="width:100%;border-radius:10px">
+          <h4>Fried Egg — ₦2,500</h4>
+        </div>
+        <div class="card">
+          <img src="image/IMG_8486.JPG" alt="" style="width:100%;border-radius:10px">
+          <h4>Spicy Naija Noodles — ₦2,400</h4>
+        </div>
+        <div class="card">
+          <img src="image/IMAG7072.JPG" alt="" style="width:100%;border-radius:10px">
+          <h4>DODO — ₦1,800</h4>
+        </div>
+      </div>
+    </section>
+
+  <!-- COUNTERS SECTION -->
+<section style="margin-top:50px; text-align:center">
+  <h3>Our Achievements</h3>
+  <p style="color:var(--muted); margin-bottom:25px;">Proud moments from our kitchen</p>
+
+  <div class="counter-box">
+    <div class="counter-item">
+      <h2 class="counter" data-target="300">0</h2>
+      <p>Orders Served</p>
+    </div>
+
+    <div class="counter-item">
+      <h2 class="counter" data-target="150">0</h2>
+      <p>Happy Customers</p>
+    </div>
+
+    <div class="counter-item">
+      <h2 class="counter" data-target="45">0</h2>
+      <p>Menu Items</p>
+    </div>
+  </div>
+</section>
+`;
+}
+  
 function renderAbout(){
   return `
-    <section>
+    <section style="margin-bottom:40px">
       <h2>About GrubNmore</h2>
-      <p><strong>GrubNmore</strong> began with a love for authentic Nigerian dishes — family recipes, fresh ingredients, and a promise to serve every plate with care.</p>
-      <h3>Our Services</h3>
-      <ul style="list-style:none;padding:0">
-        <li>• Dine-In & Takeaway</li>
-        <li>• Home Delivery</li>
-        <li>• Event Catering</li>
-        <li>• Custom Menus</li>
+      <p>At <strong>GrubNmore</strong>, we believe food should taste like home. We serve authentic Nigerian dishes inspired by family recipes passed down through generations.</p>
+    </section>
+
+    <!-- STORY SECTION -->
+    <section class="hero" style="margin-bottom:50px">
+      <img class="hero-image" src="image/IMG_0181.jpg" alt="Kitchen">
+      <div class="hero-text">
+        <h3>Our Story</h3>
+        <p>What started as a small kitchen experiment has grown into a trusted food spot loved by many. Every meal is cooked with passion, hygiene, and the freshest ingredients.</p>
+      </div>
+    </section>
+
+    <!-- MISSION + VALUES -->
+    <section>
+      <h3>Our Mission</h3>
+      <p>To deliver delicious, affordable, homemade meals that bring joy to every customer.</p>
+
+      <h3 style="margin-top:30px">Our Values</h3>
+      <ul style="list-style:none; padding:0;">
+        <li>• Quality Ingredients</li>
+        <li>• Hygiene & Care</li>
+        <li>• Fast & Reliable Delivery</li>
+        <li>• Excellent Customer Service</li>
       </ul>
+    </section>
+
+    <!-- MEET THE CHEF -->
+    <section style="margin-top:40px">
+      <h3>Meet Our Chef</h3>
+      <div class="card" style="padding:20px; text-align:center;">
+        <img src="image/IMG_9274_2_-removebg-preview.png" style="width:120px; height:120px; border-radius:100%; object-fit:cover; margin-bottom:12px;" alt="">
+        <h4>Chef Elijah</h4>
+        <p style="color:var(--muted)">Head Chef & Founder</p>
+        <p>Specialist in Nigerian comfort food — from smoky jollof to the crispiest fried chicken.</p>
+      </div>
+    </section>
+
+    <!-- HOW WE COOK -->
+    <section style="margin-top:50px">
+      <h3 style="text-align:center">How We Cook</h3>
+      <div class="cards" style="margin-top:20px">
+        <div class="card">
+          <h4>🛒 Step 1 — Fresh Ingredients</h4>
+          <p>We source everything fresh daily.</p>
+        </div>
+        <div class="card">
+          <h4>🍳 Step 2 — Home-style Cooking</h4>
+          <p>Every meal is cooked with care, just like at home.</p>
+        </div>
+        <div class="card">
+          <h4>🔥 Step 3 — Quick Delivery</h4>
+          <p>Your meal arrives hot and delicious.</p>
+        </div>
+      </div>
     </section>
   `;
 }
 
 function renderMenu(){
-  // build grid with menu items (20)
-  const items = MENU.map(i => `
-    <div class="menu-item">
-      <img src="${i.img}" alt="${i.name}">
-      <h3>${i.name}</h3>
-      <div class="price">₦${i.price.toLocaleString()}</div>
-      <button class="add-btn" data-id="${i.id}">Add to Cart</button>
-    </div>
-  `).join('');
+  const categories = ['all', 'breakfast', 'lunch', 'dinner', 'snacks', 'drinks'];
+
+const categoryNames = {
+  all: 'All',
+  breakfast: 'Rice boal',
+  lunch: 'Pasta / Protein',
+  dinner: 'Pepper Soup / Swallow',
+  snacks: 'Shawarma / Burritos / Snacks',
+  drinks: 'Drinks'
+};
   return `
     <section class="menu-section">
       <h2>Our Menu</h2>
-      <div id="menu-grid" class="menu-grid">${items}</div>
+
+      <!-- FILTER BUTTONS -->
+      <div class="menu-filters">
+        ${categories.map(cat => `
+          <button class="filter-btn ${cat === 'all' ? 'active' : ''}" data-category="${cat}">
+            ${categoryNames[cat]}
+          </button>
+        `).join('')}
+      </div>
+
+      <!-- ITEMS GO HERE -->
+      <div id="menu-grid" class="menu-grid"></div>
     </section>
   `;
 }
+function showMenuItems(category){
+  const grid = $('#menu-grid');
+  grid.innerHTML = '';
+
+  const items = category === 'all'
+    ? MENU
+    : MENU.filter(i => i.category === category);
+
+ grid.innerHTML = items.map(i => `
+  <div class="menu-item">
+    <img src="${i.img}" alt="${i.name}">
+    <h3>${i.name}</h3>
+    <p class="menu-desc">${i.description || ''}</p>
+    <div class="price">₦${i.price.toLocaleString()}</div>
+    <button class="add-btn" data-id="${i.id}">Add to Cart</button>
+  </div>
+`).join('');
+
+  // re-wire add-to-cart buttons
+  $$('.add-btn').forEach(b =>
+    b.addEventListener('click', () => addToCart(b.dataset.id))
+  );
+}
+  
 
 function renderContact(){
   return `
@@ -135,7 +305,7 @@ function router(){
 }
 
 /* ----- Cart (persisted) ----- */
-const STORAGE_KEY = 'elijah_cart_v1';
+const STORAGE_KEY = 'GrubNmore_cart_v1';
 let cart = {};
 function loadCart(){ try{ cart = JSON.parse(localStorage.getItem(STORAGE_KEY))||{}; }catch(e){ cart = {}; } }
 function saveCart(){ localStorage.setItem(STORAGE_KEY, JSON.stringify(cart)); }
@@ -192,10 +362,135 @@ function updateCartUI(){
 function showCartDrawer(){ $$('#cart-drawer').forEach(d=> d.classList.remove('hidden')); }
 function hideCartDrawer(){ $$('#cart-drawer').forEach(d=> d.classList.add('hidden')); }
 
+function animateCounters() {
+  const counters = document.querySelectorAll('.counter');
+
+  counters.forEach(counter => {
+    counter.innerText = '0';
+    const target = +counter.getAttribute('data-target');
+    const speed = 200;
+
+    const updateCounter = () => {
+      const current = +counter.innerText;
+      const increment = target / speed;
+
+      if (current < target) {
+        counter.innerText = Math.ceil(current + increment);
+        setTimeout(updateCounter, 10);
+      } else {
+        counter.innerText = target + "+";
+      }
+    };
+
+    updateCounter();
+  });
+}
+
+// SCROLL TRIGGER
+function setupCounterObserver() {
+  const counterSection = document.querySelector('.counter-box');
+  if (!counterSection) return;
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    if (entries[0].isIntersecting) {
+      animateCounters();
+      obs.disconnect(); // run once only
+    }
+  }, {
+    threshold: 0.4 // triggers when 40% of the section is visible
+  });
+
+  observer.observe(counterSection);
+}
+
+// When home loads or reloads
+window.addEventListener('hashchange', () => {
+  if (location.hash === "#home" || location.hash === "") {
+    setTimeout(setupCounterObserver, 300);
+  }
+});
+
+// On first load
+document.addEventListener('DOMContentLoaded', () => {
+  if (location.hash === "#home" || location.hash === "") {
+    setTimeout(setupCounterObserver, 300);
+  }
+});
+
+// Run counters animation when Home loads
+window.addEventListener('hashchange', () => {
+  if (location.hash === "#home" || location.hash === "") {
+    setTimeout(animateCounters, 300);
+  }
+});
+
+// ========== TODAY'S SPECIALS ROTATION ==========
+const specials = [
+  {
+    name: "Spicy Noodles & Egg",
+    price: "₦2,800",
+    image: "image/IMG_8486.JPG"
+  },
+  {
+    name: "Crispy Dodo & Sauce",
+    price: "₦1,800",
+    image: "image/IMAG7072.JPG"
+  },
+  {
+    name: "Fried Egg (Loaded)",
+    price: "₦2,500",
+    image: "image/IMG_0155.jpg"
+  }
+];
+
+let currentSpecial = 0;
+
+function updateSpecial(){
+  const box = document.getElementById("special-box");
+  const img = document.getElementById("special-img");
+  const name = document.getElementById("special-name");
+  const price = document.getElementById("special-price");
+
+  if(!box || !img) return;
+
+  // fade out
+  box.style.opacity = 0;
+
+  setTimeout(() => {
+    const item = specials[currentSpecial];
+    img.src = item.image;
+    name.textContent = item.name;
+    price.textContent = item.price;
+
+    // fade in
+    box.style.opacity = 1;
+
+    currentSpecial = (currentSpecial + 1) % specials.length;
+  }, 500);
+}
+
+function startSpecialRotation(){
+  updateSpecial();
+  setInterval(updateSpecial, 4000); // changes every 4 seconds
+}
+
+// Run when Home page loads
+window.addEventListener("hashchange", () => {
+  if(location.hash === "#home" || location.hash === ""){
+    setTimeout(startSpecialRotation, 200);
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  if(location.hash === "#home" || location.hash === ""){
+    setTimeout(startSpecialRotation, 200);
+  }
+});
+
 /* ----- WhatsApp integration ----- */
 function buildOrderMessage(){
   if(Object.keys(cart).length === 0) return null;
-  const lines = ['New order for Elijah', ''];
+  const lines = ['New order for GrubNmore', ''];
   Object.values(cart).forEach(i => lines.push(`${i.qty} x ${i.name} — ₦${i.price.toLocaleString()}`));
   lines.push('', `Total: ₦${cartTotal().toLocaleString()}`, '', 'Please confirm pickup/delivery time. Thanks!');
   return lines.join('\n');
@@ -211,20 +506,20 @@ function sendWhatsAppOrder(){
 function sendContactForm(){
   const name = (document.getElementById('name')||{}).value || '';
   const message = (document.getElementById('message')||{}).value || '';
-  const text = `Hello Elijah, my name is ${name}. ${message}`;
+  const text = `Hello GrubNmore, my name is ${name}. ${message}`;
   const num = WHATSAPP_NUMBER.replace(/\D/g,'');
   window.open(`https://wa.me/${num}?text=${encodeURIComponent(text)}`, '_blank');
 }
 
 /* ----- theme (dark mode) ----- */
 function initTheme(){
-  const saved = localStorage.getItem('elijah_theme');
+  const saved = localStorage.getItem('GrubNmore_theme');
   if(saved === 'dark') document.body.classList.add('dark');
   $$('#theme-toggle').forEach(t => t.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙');
 }
 function toggleTheme(){
   document.body.classList.toggle('dark');
-  localStorage.setItem('elijah_theme', document.body.classList.contains('dark') ? 'dark':'light');
+  localStorage.setItem('GrubNmore+_theme', document.body.classList.contains('dark') ? 'dark':'light');
   $$('#theme-toggle').forEach(t => t.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙');
 }
 
@@ -239,22 +534,40 @@ function initNavToggle(){
 
 /* ----- wire events & page-specific handlers after render ----- */
 function wirePage(){
-  // menu page add buttons
-  $$('#menu-grid .add-btn').forEach(b => b.addEventListener('click', ()=> {
-    addToCart(b.dataset.id);
-  }));
-  // cart control buttons (tiny + -)
+  // ----- menu filter buttons -----
+  $$('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const cat = btn.dataset.category;
+
+      // active state
+      $$('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      // show items
+      showMenuItems(cat);
+    });
+  });
+
+  // Show ALL items by default when menu page loads
+  if($('#menu-grid')) showMenuItems('all');
+
+  // add-to-cart inside other pages
+  $$('.add-btn').forEach(b =>
+    b.addEventListener('click', ()=> addToCart(b.dataset.id))
+  );
+
+  // cart controls
   $$('.tiny').forEach(b => b.addEventListener('click', ()=> changeQty(b.dataset.id, Number(b.dataset.delta))));
-  // cart drawer buttons
   $$('#open-cart').forEach(b => b.addEventListener('click', showCartDrawer));
   $$('#close-cart').forEach(b => b.addEventListener('click', hideCartDrawer));
   $$('#send-wa').forEach(b => b.addEventListener('click', sendWhatsAppOrder));
-  // contact send
+
+  // contact form
   const contactSend = document.getElementById('contact-send');
   if(contactSend) contactSend.addEventListener('click', sendContactForm);
+
   // theme toggle
   $$('#theme-toggle').forEach(b => b.addEventListener('click', toggleTheme));
-  // small buttons with data-link should update hash automatically (anchor does)
 }
 
 /* ----- init app ----- */
